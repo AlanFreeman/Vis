@@ -26,12 +26,12 @@ function anaVis
 	%	-.2, 2.4; .3, -2.9; .8, .8; 1.6, -2; 2.3, 2.4]; % high DSI
 	%	m.loc.loc = [-2.4, -1.5; -2.4, 1.2; -.8, -1.7; -.2, -.2; .1, -1.4; ...
 	%	.2, .7; .8, -2; 1.2, .1; 1.7, -1.1; 1.5, 1.7]; % low DSI
-	m.loc.loc = [-.8, 0]; m.loc.loc = [-.8, .4];
+	m.loc.loc = [-.8, 0];
 	w = .5 * (m.p.wid - 2); % half-width of cropped visual field (deg)
 	lim = [- w, w]; tick = [- w, 0, w]; % axis limits and ticks (deg)
 
 	% Specify tasks to be performed
-	switch 'ind.x.y'
+	switch 'resp.dir'
 		case 'cor.ind' % plot correlation between DSI maps
 			m.tasks = 'corInd plot set print';
 			m.corInd.file = 'Offset'; % Covariance or Offset
